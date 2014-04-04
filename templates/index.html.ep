@@ -1,0 +1,16 @@
+% title 'Home';
+% layout 'main';
+% my $link = begin
+  % my ($url, $name) = @_;
+  <li><%= link_to $url => begin %><%= $name %><% end %></li>
+% end
+
+<h1>hai <%= $user %>.</h1>
+% if(flash 'success') {
+    <strong><%= flash 'success' %></strong><br/>
+% }
+<ul>
+  %= $link->('page', 'Page')
+  %= $link->('agent', 'Agent')
+  %= $link->('meowf', 'Meowf')
+</ul>

@@ -1,0 +1,3 @@
+% title 'Page';
+% layout 'main';
+<p>The number is <%= $seven %>.</p>

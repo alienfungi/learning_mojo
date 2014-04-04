@@ -1,0 +1,5 @@
+% title 'Agent';
+% layout 'main';
+<p>
+  Request by <%= $ua %> reached <%= $host %>
+</p>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <%= content %>
+    <br/>
+    <footer>
+      %= link_to('Logout', 'logout') if(session('user'))
+    </footer>
+  </body>
+</html>

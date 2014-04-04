@@ -1,0 +1,17 @@
+% title 'Login';
+% layout 'main';
+
+%= form_for login => begin
+  % if(flash 'error') {
+    <strong><%= flash 'error' %></strong><br/>
+  % } elsif(flash 'success') {
+    <strong><%= flash 'success' %></strong><br/>
+  % }
+  <label>Name:</label>
+  %= text_field 'user', class => 'dog'
+  <br/>
+  <label>Password:</label>
+  %= password_field 'pass'
+  <br/>
+  %= submit_button 'Login'
+% end
