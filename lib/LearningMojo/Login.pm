@@ -1,7 +1,7 @@
 package LearningMojo::Login;
 use Mojo::Base 'Mojolicious::Controller';
 
-sub new {}
+sub form {}
 
 sub create {
   my $self = shift;
@@ -27,7 +27,7 @@ sub destroy {
   my $self = shift;
   $self->session(expires => 1);
   $self->flash(success => 'You are now logged out!');
-  $self->redirect_to('new');
+  $self->redirect_to('login');
 }
 
 sub logged_in {

@@ -10,7 +10,7 @@ sub startup {
   $self->helper(users => sub { state $users = MyUsers->new });
 
   my $r = $self->routes;
-  $r->get('/login')->to('login#new');
+  $r->get('/login')->to('login#form');
   $r->post('/login')->to('login#create');
   $r->get('/logout')->to('login#destroy');
 
